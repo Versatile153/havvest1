@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sign Up page</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	
+ <div class="main">
+ 	<div class="SignUp">
+ 		<div class="header">
+ 			<div class="logo">havvest</div>
+ 		</div>
+		<div class="form">
+			<form action="" method="post">
+				<div>
+					<h2>Get Started Now</h2>
+					<p>The smartest way to invest and save online</p>
+				</div> <br>
+				<div class="email">
+					<div><label for="email">Email address<span class="asteriks">*</span></label></div> 
+					<div><input type="email" name="email" id="email" placeholder="Enter email address" required></div>  
+				</div>
+				<div class="password">
+					<div><label for="password">Password<span class="asteriks">*</span></label></div> 
+					<div><input type="password" name="password" id="password" placeholder="Enter password" required></div> 
+				</div>
+				
+				<div class="agree">
+					<input type="checkbox"> <label for="agreement">I agree to the <span class="asteriks">terms & condition privacy policy</span> </label>
+				</div>
+				<div class="btn"><button>Sign up</button></div>
+				
+				<div>Already have an account? <span class="asteriks">Sign in</span> </div>
+
+				<div class="recommendation">
+					<p>Password must be</p>
+					<div><input type="radio" name="" id=""> <label for="radion">Minimum of 8 characters</label></div>
+					<div><input type="radio" name="" id=""> <label for="radion">Use one upper case character</label></div>
+					<div><input type="radio" name="" id=""> <label for="radion">One unique character (e.g @!$#*&)</label></div>					 
+				</div>
+
+			</form>
+		</div>
+ 	</div>
+ 	<div class="slider">
+ 		<p>An easy to use and intuitive dashboard to <br>
+			<span class="asteriks">manage all your investments</span> </p>
+		<div class="slide">
+			<div class="image-container">
+				<section class="wrapper">
+					<div class="carousel">
+						<img src="Havvestvfdd 1.png" alt="" />
+						<img src="fgrtte 1.png" alt="" />
+						<img src="Contact us image1 1.png" alt="">
+					</div>
+				</section>
+			</div>
+		</div>		
+	</div>
+ </div>
+</body>
+<script>
+	//Get the DOM
+	const wrapper = document.quesrySelector(".wrapper"),
+			carousel = document.quesrySelector(".carousel"),
+			images = document.querySelectorAll("img"),
+			buttons = document.querySelectorAll(".button");
+
+	let imageIndex = 1,
+	intervalId;
+
+	//Define function to start automatic image slider
+	const autoSlide = () => {
+		// Start the slide show by calling  slideImage() every 2 seconds
+		intervalId = setInterval(() => slideImage(++imageIndex), 2000);
+		// Call autoSlide function on page load
+		autoSlide();
+
+		// A function that updates the cariysek dusokat to show the specified image
+		const slideImage = () => {
+			// Calculate the updated image index
+			imageIndex = imageIndex === images.length ? 0 : imageIndex < 0 ? images.length - 1 : imageIndex;
+			// Update the carousel display to show the specific image
+			carousel.style.transform = ` translate(-${imageIndex * 1000}%)`;
+		};
+
+		// A function that updates the carousel display to show the next or previous image
+		const updateClick = (e) => {
+			// Stop the automatic slideshow
+			clearInterval(intervalId);
+			// Calculate the updated image index based on the button clicked 
+			imageIndex += e.target.id === "next" ? 1 : -1;
+			slideImage(imageIndex);
+			// Restart the automatic slideshow
+			autoSlide();
+		}
+	}
+</script>
+</html>

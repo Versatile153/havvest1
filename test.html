@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Three-Step Sign Up Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .step-form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .step {
+      display: none;
+    }
+    .step.active {
+      display: block;
+    }
+    .step-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+    }
+    .step-header h2 {
+      margin: 0;
+    }
+    .step-buttons {
+      display: flex;
+    }
+    .step-buttons button {
+      margin: 5px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .slider-container {
+      max-width: 400px;
+      overflow: hidden;
+      margin: 20px auto;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.3s ease;
+    }
+
+    .slider img {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+    <div class="slider-container">
+        <div class="slider">
+          <img src="image1.jpg" alt="Step 1">
+          <img src="image2.jpg" alt="Step 2">
+          <img src="image3.jpg" alt="Step 3">
+        </div>
+      </div>
+
+  <div class="step-form">
+    <div class="step step-1 active">
+      <div class="step-header">
+        <h2>Step 1: Account Information</h2>
+        <div class="step-buttons">
+          <button onclick="nextStep(1)">Next</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter your username">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email">
+      </div>
+    </div>
+
+    <div class="step step-2">
+      <div class="step-header">
+        <h2>Step 2: Personal Information</h2>
+        <div class="step-buttons">
+          <button onclick="prevStep(2)">Previous</button>
+          <button onclick="nextStep(2)">Next</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" placeholder="Enter your full name">
+      </div>
+      <div class="form-group">
+        <label for="birthdate">Date of Birth:</label>
+        <input type="date" id="birthdate">
+      </div>
+    </div>
+
+    <div class="step step-3">
+      <div class="step-header">
+        <h2>Step 3: Account Type</h2>
+        <div class="step-buttons">
+          <button onclick="prevStep(3)">Previous</button>
+          <button onclick="submitForm()">Submit</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="accountType">Choose Account Type:</label>
+        <select id="accountType">
+          <option value="free">Free</option>
+          <option value="premium">Premium</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentStep = 1;
+
+    function showStep(stepNumber) {
+      const steps = document.querySelectorAll('.step');
+      for (let i = 0; i < steps.length; i++) {
+        steps[i].classList.remove('active');
+      }
+      steps[stepNumber - 1].classList.add('active');
+      currentStep = stepNumber;
+    }
+
+    function nextStep(stepNumber) {
+      if (stepNumber === 1) {
+        // Add validation logic for Step 1 if required
+      } else if (stepNumber === 2) {
+        // Add validation logic for Step 2 if required
+      }
+
+      if (currentStep < 3) {
+        showStep(currentStep + 1);
+      }
+    }
+
+    function prevStep(stepNumber) {
+      if (currentStep > 1) {
+        showStep(currentStep - 1);
+      }
+    }
+
+    function submitForm() {
+      // Here, you can gather all the form data and perform the final submission.
+      // For simplicity, let's log the form data to the console in this example.
+      const formData = {
+        username: document.getElementById('username').value,
+        email: document.getElementById('email').value,
+        fullname: document.getElementById('fullname').value,
+        birthdate: document.getElementById('birthdate').value,
+        accountType: document.getElementById('accountType').value,
+      };
+      console.log(formData);
+
+      // In a real implementation, you would typically send this data to the server.
+    }
+  </script>
+</body>
+</html>

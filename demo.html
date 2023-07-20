@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <div class="main">
+    <div class="SignUp">
+      <div class="header">
+        <div class="logo"><img src="/orange_logo__havvest.png" alt=""></div>
+      </div>
+      <div class="form">
+        <form action="" method="post">
+          <div>
+            <h2>Get Started Now</h2>
+            <p>The smartest way to invest and save online</p>
+          </div> <br>
+          <div class="email">
+            <div><label for="email">Email address<span class="asteriks">*</span></label></div> 
+            <div><input type="email" name="email" id="email" style="font-size: large;" placeholder="Enter email address" required></div>  
+          </div>
+          <div class="password">
+            <div><label for="password">Password<span class="asteriks">*</span></label></div> 
+            <div><input type="password"  style="font-size: large;"  name="password" id="password" placeholder="Enter password" required></div> 
+          </div>
+          
+          <div class="agree">
+            <input type="checkbox"> <label style="font-size: large;"  for="agreement">I agree to the <span class="asteriks">terms & condition privacy policy</span> </label>
+          </div>
+          <div class="btn"><button>Sign up</button></div>
+          
+          <div>Already have an account? <span class="asteriks">Sign in</span> </div>
+
+          <div class="recommendation">
+            <p>Password must be</p>
+            <div><input type="radio"  name="" id=""> <label for="radion">Minimum of 8 characters</label></div>
+            <div><input type="radio" name="" id=""> <label for="radion">Use one upper case character</label></div>
+            <div><input type="radio" name="" id=""> <label for="radion">One unique character (e.g @!$#*&)</label></div>                     
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="slider">
+      <p>An easy to use and intuitive dashboard to <br>
+        <span class="asteriks">manage all your investments</span> </p>
+      <div class="image-container">
+        <section class="wrapper">
+          <div class="carousel">
+            <img src="Havvestvfdd 1.png" alt="" />
+						<img src="fgrtte 1.png" alt="" />
+						<img src="Contact us image1 1.png" alt="">
+          </div>
+        </section>
+      </div>
+      <p>An easy to use and intuitive dashboard to <br>
+        <span class="asteriks">manage all your investments</span> </p>
+    </div>
+  </div>
+
+  <script>
+   document.addEventListener('DOMContentLoaded', function () {
+  // JavaScript code for automatic image slider on click
+  const carousel = document.querySelector(".carousel");
+  const images = carousel.querySelectorAll("img");
+  let currentImageIndex = 0;
+
+  function showNextImage() {
+    images[currentImageIndex].style.opacity = 0;
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    images[currentImageIndex].style.opacity = 1;
+  }
+
+  // Add click event listener to the image container
+  const imageContainer = document.querySelector(".image-container");
+  imageContainer.addEventListener("click", function () {
+    showNextImage();
+  });
+});
+
+  </script>
+</body>
+</html>

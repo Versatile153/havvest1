@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    font-family: "Montserrat";
+}
+.main{
+    display: flex;
+    background: magenta;
+    /* gap: 20px; */
+}
+.SignUp{
+    padding: 40px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    color: #414141;
+    background: #fff;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.btn button{
+    width: 100%;
+    padding: 16px 0px 17px 0px;
+    background: #f90b0b;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+}
+.asteriks{
+    color: #f90b0b;
+}
+
+span{
+    font-weight: 500;
+}
+.email input, .password input{
+    display: flex;
+    border-radius: 15px;
+    border: 1px solid #929292;
+    flex-shrink: 0;
+    width: 400px;
+    padding: 15px 100px 20px 15px;
+    align-items: center;
+}
+.email input:focus, .password input:focus{
+    outline: none;
+}
+.email, .password{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.recommendation input{
+    border-radius: 100px;
+    border: 1px solid #e9e9e9;
+    background: #f6f6f6;
+    width: 29px;
+    height: 18px;
+    /* outline: 1px solid red; */
+}
+.recommendation{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.slider{
+    width: 55%;
+    background-color: #fdf4f1;
+    padding: 40px;
+} 
+.wrapper{
+    display: flex;
+    max-width: 650px;
+    width: 100%;
+    /* height: 400px; */
+    outline: 1px solid red;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
+    box-shadow: 0 5px 10px rgba(0, 0, 0.1);
+}
+
+.image-container{
+    height: 320px;
+    max-width: 500px;
+    width: 100%;
+    overflow: hidden;
+}
+.image-container .carousel{
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s ease;
+}
+.carousel img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
