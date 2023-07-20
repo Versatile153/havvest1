@@ -13,29 +13,34 @@
     height: 100vh; /* Set the height to 100% of the viewport height */
   }
   
-  .SignUp {
-    padding: 60px;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    color: #414141;
-    background: #fff;
-    font-size: 20px; /* Increase the font size */
-    box-sizing: border-box;
-    overflow-y: auto; /* Add scrollbar when content exceeds the height */
-  }
-  
-  /* Hide the scrollbar for WebKit-based browsers */
-  .SignUp::-webkit-scrollbar {
-    display: none;
-  }
-  
-  /* Hide the scrollbar for other browsers */
-  .SignUp {
-    scrollbar-width: none;
-  }
-  
+/* Updated styles to hide the scrollbar in Chrome */
+.SignUp {
+  padding: 40px;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  color: #414141;
+  background: #fff;
+  overflow-y: scroll; /* Use 'scroll' instead of 'auto' */
+}
+
+/* Hide the scrollbar for Webkit-based browsers (Chrome, Safari, and Opera) */
+.SignUp::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+/* Optional: Set a maximum height to enable scrolling when the content exceeds the container height */
+.SignUp .form {
+  max-height: 500px; /* Adjust this value based on your content's height */
+  overflow-y: auto;
+}
+
+/* Hide the scrollbar handle in Chrome */
+.SignUp ::-webkit-scrollbar-thumb {
+  display: none;
+}
   form {
     display: flex;
     flex-direction: column;
@@ -133,9 +138,9 @@ form{
 .btn button{
     width: 100%;
     padding: 16px 0px 17px 0px;
-    background: #f90b0b;
+    background: #FC4E04;
     border: none;
-    border-radius: 15px;
+    border-radius: 12px;
     color: white;
     font-size: large;
     font-weight: bold;
@@ -177,12 +182,22 @@ span{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    font-weight: bolder;
+
 }
 .slider{
     width: 55%;
     background-color: #fdf4f1;
     padding: 40px;
 } 
+.slider p{
+ font-size: xx-large;
+} 
+.slider span{
+  color: 
+  #FC4E04;
+  font-size: xx-large;
+ } 
 .wrapper{
     display: flex;
     max-width: 650px;
