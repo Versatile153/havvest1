@@ -4,100 +4,498 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Sign Up page</title>
+
+  
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="style.css">
+	<style>
+		.slide-container {
+			display: none;
+		}
+		.slide-container.active {
+			display: block;
+		}
+
+    
+
+  </style>
+  
+	</style>
 </head>
 <body>
 
-	
- <div class="main">
+  <div class="desktop-content">
+	<div class="main">
+		
+		<div class="slide-container active" style="height: 100vh; width: 120vw;" id="slide1">
+     
+       <div class="main" class="form" style="width: 100%;">
+         <div class="SignUp">
+           <div class="header">
+             <div class="logo"><img src="orange_logo__havvest.png" alt="logo"></div>
+             <div style="margin-left: 6rem;margin-top: 5rem;">
+              <h2 style="font-weight: bold;color: #212121;
+              ">Get Started Now</h2>
+           <p style="font-weight: bold;color: #212121;
+           ">The smartest way to invest and save online</p>
+             </div>
+           </div>
+           
+          <div class="form">
+            
+            <form action="" method="post" style="margin-top: 2rem;">
+              <div>
+              
+                </div> <br>
+              <div class="email" style="color:#212121
+              ;">
+                <div><label style="font-size: larger;" for="email">Email address<span class="asteriks">*</span></label></div> 
+                <div><input style="font-size: large;" type="email" name="email" id="email" placeholder="Enter email address" required></div>  
+              </div>
+
+             
+                <style>
+  /* Style the eye icon */
+  .bi-eye {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #929292;
+  }
+
+  /* Style the line that strikes through the password input text */
+  #password-toggle:checked + svg {
+    color: #FC4E04; /* Change color when checked */
+  }
+
+  /* Remove the default checkbox styles */
+  #password-toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    pointer-events: none;
+  }
+
+  /* Add a cursor pointer for the eye icon */
+  #password-toggle + svg {
+    cursor: pointer;
+  }
+</style>
+
+              </style>
+              <div class="password">
+                <div><label  style="font-size: larger;" for="password">Password<span class="asteriks">*</span></label></div> 
+                <div style="position: relative;">
+                  <input type="password" style="font-size: large; padding-right: 35px;" name="password" id="password" placeholder="Enter password" required>
+                  <label for="password-toggle" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+                    <input type="checkbox" id="password-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                      <path d="M1.184 7.243a14.9 14.9 0 0 0 0 1.514c.142.419.36.835.642 1.198A15.206 15.206 0 0 0 4.3 11.36c.29.24.61.44.957.585.348.143.712.23 1.09.257.394.027.79-.057 1.176-.217a14.9 14.9 0 0 0 1.514-.641c.363-.282.78-.5 1.199-.643a15.206 15.206 0 0 0 1.198-.642c.24-.144.44-.364.585-.58.144-.215.23-.46.257-.72.028-.392-.058-.788-.217-1.173a14.9 14.9 0 0 0-.641-1.515c-.282-.363-.5-.78-.642-1.199a15.206 15.206 0 0 0-.642-1.197c-.24-.24-.48-.47-.72-.657-.23-.187-.464-.326-.72-.425A4.002 4.002 0 0 0 8 4c-.354 0-.697.05-1.025.144-.256.1-.49.24-.72.426-.256.188-.5.417-.74.657a15.206 15.206 0 0 0-1.197 1.198c-.36.36-.658.777-.92 1.198zm2.79-3.663c-.106-.06-.198-.134-.276-.222a4.894 4.894 0 0 1-.363-.48c.004-.008.008-.016.012-.024-.07-.116-.16-.225-.262-.327a3.55 3.55 0 0 0-.33-.3c-.102-.102-.211-.192-.327-.262a4.893 4.893 0 0 1-.48-.363c-.088-.078-.162-.17-.222-.276-.036-.06-.078-.12-.116-.18l1.127-1.126c.2-.2.51-.226.728-.073l.025.024c.196.098.376.238.536.398s.3.34.398.536l.024.025c.152.218.128.528-.073.728L3.922 6.58c-.06-.038-.12-.08-.18-.116zM8 9a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                    </svg>
+                  </label>
+                </div>
+                <script>
+                  const passwordInput = document.getElementById('password');
+                  const passwordToggle = document.getElementById('password-toggle');
+                
+                  passwordToggle.addEventListener('click', function () {
+                    if (passwordToggle.checked) {
+                      passwordInput.type = 'text';
+                    } else {
+                      passwordInput.type = 'password';
+                    }
+                  });
+                </script>
+                
+              </div>
+              <style>
+                .wider-checkbox {
+                  width: 20px; /* Set the width as desired */
+                }
+              </style>
+              
+              <div class="agree">
+                <input class="wider-checkbox" style="font-size: large;font-weight: bolder;color: rgba(0, 0, 0, 0.885);padding: 10px;" type="checkbox">
+                <label for="agreement">I agree to the <span class="asteriks">terms & condition privacy policy</span> </label>
+              </div>
+              
+              <div class="btn"><button class="continue-button">Sign up</button></div>
+              
+              <div style="text-align: center;">Already have an account? <span class="asteriks">Sign in</span> </div>
+      
+              <div class="recommendation" style="color:#212121
+              ;font-size: larger;">
+                <p style="color:#212121
+                ;font-size: larger;font-weight: lighter;">Password must be</p>
+                <div><input type="radio" name="" id=""> <label for="radion">Minimum of 8 characters</label></div>
+                <div><input type="radio" name="" id=""> <label for="radion">Use one upper case character</label></div>
+                <div><input type="radio" name="" id=""> <label for="radion">One unique character (e.g @!$#*&)</label></div>					 
+              </div>
+      
+            </form>
+          </div>
+      
+          
+         </div>
+         <div class="guide-slide">
+           <p>An easy to use and intuitive dashboard to <br>
+            <span class="asteriks">manage all your investments</span> </p>
+            <div class="carousel">
+              <div class="slider-container" style="width: max-content;height: max-content;">
+                <div class="slider">
+                  <div class="slides">
+                    <div class="slide">
+                      
+                    <img  src="Havvestvfdd 1.png" alt="Image 1">
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+              
+        </div>
+       </div>
+      </body>
+      
+       
+      </html>
+		</div>
+
+	<!-- second begins -->
+  <style>
+    form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn button {
+  width: 100%;
+  padding: 16px 0px 17px 0px;
+  background: #FC4E04;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.asteriks {
+  color: #f90b0b;
+}
+
+span {
+  font-weight: 500;
+}
+
+.email input,
+.password input,
+.username input,
+.firstName input,
+.lastName input {
+  border-radius: 15px;
+  border: 1px solid #929292;
+  flex-shrink: 0;
+  width: 400px;
+  padding: 15px 20px;
+  font-size: large;
+}
+
+.email input:focus,
+.password input:focus,
+.username input:focus,
+.firstName input:focus,
+.lastName input:focus {
+  outline: none;
+}
+
+.email,
+.password,
+.username,
+.firstName,
+.lastName {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+  </style>
+		<div class="slide-container" id="slide2" style="width: 100%;">
+		
+ 
+
+ <div class="main" style="width: 100%;">
  	<div class="SignUp">
  		<div class="header">
- 			<div class="logo">havvest</div>
+ 			<div class="logo"><img src="orange_logo__havvest.png" alt="logo"></div>
  		</div>
 		<div class="form">
+      <style>
+         /* Flexbox container to center the form */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Default styles for the form */
+    .form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* Optional: Adjust the maximum width of the form container */
+    }
+
+    /* Styles for small devices (e.g., mobile phones) */
+  
+    
+      </style>
 			<form action="" method="post">
-				<div>
-					<h2>Get Started Now</h2>
-					<p>The smartest way to invest and save online</p>
-				</div> <br>
-				<div class="email">
-					<div><label for="email">Email address<span class="asteriks">*</span></label></div> 
-					<div><input type="email" name="email" id="email" placeholder="Enter email address" required></div>  
-				</div>
-				<div class="password">
-					<div><label for="password">Password<span class="asteriks">*</span></label></div> 
-					<div><input type="password" name="password" id="password" placeholder="Enter password" required></div> 
-				</div>
-				
-				<div class="agree">
-					<input type="checkbox"> <label for="agreement">I agree to the <span class="asteriks">terms & condition privacy policy</span> </label>
-				</div>
-				<div class="btn"><button>Sign up</button></div>
-				
-				<div>Already have an account? <span class="asteriks">Sign in</span> </div>
-
-				<div class="recommendation">
-					<p>Password must be</p>
-					<div><input type="radio" name="" id=""> <label for="radion">Minimum of 8 characters</label></div>
-					<div><input type="radio" name="" id=""> <label for="radion">Use one upper case character</label></div>
-					<div><input type="radio" name="" id=""> <label for="radion">One unique character (e.g @!$#*&)</label></div>					 
-				</div>
-
-			</form>
+        <div style="margin-top: 7rem; ">
+          <h2 style="font-weight: bolder;font-size: xx-large;color: black;">Get Started Now</h2>
+          <p style="font-weight: bolder;font-size:large;color: black;" >The smartest way to invest and save online</p>
+        </div> <br>
+        <div class="firstName">
+          <div><label style="border-radius: 6px;" for="first-name">First Name<span class="asteriks">*</span></label></div>
+          <div><input style="font-size: large;width:30rem;" type="text" name="first-name" id="first-name" placeholder="Enter first name" required></div>
+        </div>
+        <div class="lastName">
+          <div><label for="last-name">Last Name<span class="asteriks">*</span></label></div>
+          <div><input style="font-size: large; width:30rem;" type="text" name="last-name" id="last-name" placeholder="Enter last name" required></div>
+        </div>
+        <div class="username">
+          <div><label for="username">Username<span class="asteriks">*</span></label></div>
+          <div><input style="font-size: large; width:30rem;" type="text" name="username" id="username" placeholder="Enter username" required></div>
+        </div>
+      
+        <div class="btn"><button class="continue-button" style="margin-top: 4rem;">Continue</button></div>
+      
+        <!-- <div style="text-align: center;">Already have an account? <span class="asteriks">Sign in</span> </div> -->
+      </form>
+      
 		</div>
+
+		
  	</div>
- 	<div class="slider">
- 		<p>An easy to use and intuitive dashboard to <br>
-			<span class="asteriks">manage all your investments</span> </p>
-		<div class="slide">
-			<div class="image-container">
-				<section class="wrapper">
-					<div class="carousel">
-						<img src="Havvestvfdd 1.png" alt="" />
-						<img src="fgrtte 1.png" alt="" />
-						<img src="Contact us image1 1.png" alt="">
+
+
+ 	<div class="guide-slide">
+    <div style="display: flex;flex-direction: column;gap: 4rem;">
+      <p>A mobile friendly interface to keep you <br>
+        <span class="asteriks">investing on the go</span> </p>
+    </div>
+ 		
+			<div class="carousel">
+				<div class="slider-container"  style="width: 120%;height: 130%;">
+					<div class="slider">
+						<div class="slides">
+							<div class="slide">
+							<img src="/Group 2126 1 (1).png" alt="Image 1">
+              
+							</div>
+							
+						</div>
 					</div>
-				</section>
+				</div>
+				<div class="dots">
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+				</div>
 			</div>
-		</div>		
+				
 	</div>
  </div>
-</body>
-<script>
-	//Get the DOM
-	const wrapper = document.quesrySelector(".wrapper"),
-			carousel = document.quesrySelector(".carousel"),
-			images = document.querySelectorAll("img"),
-			buttons = document.querySelectorAll(".button");
 
-	let imageIndex = 1,
-	intervalId;
+		</div>
+<!-- second ends -->
+	
+<div class="slide-container active" id="slide3"  style="width: 100%;">
+  
+ <div class="main" style="width: 100%;">
+  <div class="SignUp">
+    <div class="header">
+      <div class="logo"><img src="orange_logo__havvest.png" alt="logo"></div>
+    </div>
+   <div class="form">
+    <style>
+      .pin-container {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  gap: 2rem;
+  margin: 0 auto;
+}
+/* Hide scrollbar on webkit-based browsers */
+::-webkit-scrollbar {
+  width: 5px; /* Set the width of the scrollbar */
+}
 
-	//Define function to start automatic image slider
-	const autoSlide = () => {
-		// Start the slide show by calling  slideImage() every 2 seconds
-		intervalId = setInterval(() => slideImage(++imageIndex), 2000);
-		// Call autoSlide function on page load
-		autoSlide();
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Make the thumb (the draggable part) transparent */
+}
 
-		// A function that updates the cariysek dusokat to show the specified image
-		const slideImage = () => {
-			// Calculate the updated image index
-			imageIndex = imageIndex === images.length ? 0 : imageIndex < 0 ? images.length - 1 : imageIndex;
-			// Update the carousel display to show the specific image
-			carousel.style.transform = ` translate(-${imageIndex * 1000}%)`;
-		};
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Make the track (the area behind the thumb) transparent */
+}
+/* Hide navigation dots on the carousel */
+.carousel .dots {
+  display: none;
+}
 
-		// A function that updates the carousel display to show the next or previous image
-		const updateClick = (e) => {
-			// Stop the automatic slideshow
-			clearInterval(intervalId);
-			// Calculate the updated image index based on the button clicked 
-			imageIndex += e.target.id === "next" ? 1 : -1;
-			slideImage(imageIndex);
-			// Restart the automatic slideshow
-			autoSlide();
+.pin-input {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+    </style>
+<style>
+  .pin-container {
+    display: flex;
+    flex-direction: row;
+    padding-right: 3rem;
+    align-items: center;
+    margin-left: auto; /* Add auto margin to center the container horizontally */
+    margin-right: auto; /* Add auto margin to center the container horizontally */
+  }
+
+  .pin-input {
+    width: 80px; /* Increase the width as desired */
+    height: 80px;
+    font-size: 24px;
+    text-align: center;
+    border: 1px solid #ccc;
+    
+    border-radius: 5px;
+    outline: none;
+  }
+
+
+  
+</style>
+
+    
+     <form action="" method="post">
+       <div>
+         <h2 style="font-weight: bolder; font-size: xx-large;">Create a 4-digit transaction pin</h2>
+         <p style="font-weight: bold;">The Pin will be used to authorize transactions </p>
+       </div> <br>
+
+       <div class="pin-container" style="margin-right: 16rem;">
+        <input type="text" maxlength="1" id="input1" class="pin-input" />
+        <input type="text" maxlength="1" id="input2" class="pin-input" />
+        <input type="text" maxlength="1" id="input3" class="pin-input" />
+        <input type="text" maxlength="1" id="input4" class="pin-input" />
+      </div>
+      <div style="margin-top: 3rem;width: 30rem;" class="btn"><button class="continue-button">Sign up</button></div>
+     </form>
+     
+   </div>
+
+   
+  </div>
+  <div class="guide-slide">
+   <div style="display: flex;flex-direction: column;gap: 4rem;">
+     <p>Happy Havvestors trusts our <br>
+       <span class="asteriks">business model</span> </p>
+   </div>
+    
+     <div class="carousel">
+       <div class="slider-container">
+         <div class="slider">
+           <div class="slides">
+             <div class="slide">
+             <img src="/Contact us image1 1.png" alt="Image 1">
+             </div>
+             
+           </div>
+         </div>
+       </div>
+       <div class="dots">
+         <span class="dot"></span>
+         <span class="dot"></span>
+         <span class="dot"></span>
+       </div>
+     </div>
+       
+ </div>
+</div>
+</div>
+	</div>
+  <!-- DESKTOP ENDS -->
+</div>
+
+	<script>
+		let currentSlide = 1;
+		const totalSlides = 3;
+
+		document.addEventListener("click", function () {
+			currentSlide = (currentSlide % totalSlides) + 1;
+			showSlide(currentSlide);
+		});
+
+		function showSlide(slideNumber) {
+			const slides = document.querySelectorAll(".slide-container");
+			slides.forEach((slide) => {
+				slide.classList.remove("active");
+			});
+			document.getElementById("slide" + slideNumber).classList.add("active");
 		}
-	}
-</script>
+
+		// Show the first slide initially
+		showSlide(currentSlide);
+	</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  <div class="mobile-content">
+  
+
+
+
+
+    <iframe src="mobile.html" width="100%" height="500px" frameborder="0"></iframe>
+
+
+
+
+
+
+
+
+    
+  </div>
+  
+
+
+</body>
 </html>

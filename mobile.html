@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign Up page</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function loadAppropriateContent() {
+        if (window.innerWidth <= 768) { // Change 768 to your desired breakpoint for mobile devices
+            fetch('mobile.html')
+                .then(response => response.text())
+                .then(content => {
+                    document.documentElement.innerHTML = content;
+                    // You may also want to update the page title if it differs between versions
+                    document.title = 'Mobile Version';
+                });
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', loadAppropriateContent);
+    window.addEventListener('resize', loadAppropriateContent);
+</script>
+
+  <style>
+body
+{
+  background-color: white;
+}
+@media (max-width: 768px) {
+      .slide-container {
+        height: 130vh;
+      }
+
+      .guide-slide {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .carousel {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .slide img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .form {
+        height: 100vh;
+        justify-content: center;
+      }
+    }
+    /* Add your custom styles here */
+    .slide-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+
+    /* Hide scrollbar on webkit-based browsers */
+::-webkit-scrollbar {
+  width: 5px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Make the thumb (the draggable part) transparent */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Make the track (the area behind the thumb) transparent */
+}
+
+    .slide-container.active {
+      display: block;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .form input {
+      border-radius: 15px;
+      border: 1px solid #929292;
+      width: 100%;
+      max-width: 400px;
+      padding: 15px 20px;
+      font-size: large;
+    }
+
+    .pin-container {
+      display: flex;
+      justify-content: space-between;
+      width: 200px;
+      gap: 2rem;
+      margin: 0 auto;
+    }
+
+    .pin-input {
+      width: 40px;
+      height: 40px;
+      font-size: 24px;
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .btn button {
+      width: 100%;
+      padding: 16px 0px 17px 0px;
+      background: #FC4E04;
+      border: none;
+      border-radius: 15px;
+      color: white;
+      font-size: large;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .form input {
+        max-width: 300px;
+      }
+
+      .pin-container {
+        width: 150px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .form input {
+        max-width: 250px;
+      }
+
+      .pin-container {
+        width: 100px;
+      }
+    }
+
+    .slide {
+    height: 100%; /* Make the slide occupy the full height of the carousel */
+    border: none; /* Remove the border */
+  }
+    
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="main">
+
+      <!-- First Slide -->
+      <div class="slide-container active" id="slide1"  style="border: none;">
+        <div class="guide-slide">
+          <p  style="margin-top: 4rem;">An easy to use and intuitive dashboard to <br>
+            <span class="asteriks">manage all your investments</span> </p>
+          <div class="carousel">
+            <div class="slider-container">
+              <div class="slider">
+                <div class="slides" >
+                  <div class="slide" style="height: 100vh;">
+                    <img style="margin-top: 4rem;" src="Havvestvfdd 1.png" alt="Image 1">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dots">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Slide -->
+      <div class="slide-container" id="slide2">
+        <div class="guide-slide">
+          <div style="display: flex;flex-direction: column;gap: 4rem;">
+            <p>A mobile friendly interface to keep you <br>
+              <span class="asteriks">investing on the go</span> </p>
+          </div>
+          <div class="carousel">
+            <div class="slider-container">
+              <div class="slider">
+                <div class="slides">
+                  <div class="slide">
+                    <img src="/Group 2126 1 (1).png" alt="Image 1">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dots">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Third Slide -->
+      <div class="slide-container active" id="slide3">
+        <div class="guide-slide">
+          <div style="display: flex;flex-direction: column;gap: 4rem;">
+            <p>Happy Havvestors trusts our <br>
+              <span class="asteriks">business model</span> </p>
+          </div>
+          <div class="carousel">
+            <div class="slider-container">
+              <div class="slider">
+                <div class="slides">
+                  <div class="slide">
+                    <img src="/Contact us image1 1.png" alt="Image 1">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dots">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fourth Slide -->
+      <div class="slide-container" id="slide4">
+        <div class="main" style="width: 100%;">
+          <div class="SignUp">
+            <div class="header">
+              <div class="logo"><img src="orange_logo__havvest.png" alt="logo"></div>
+            </div>
+            <div class="form">
+              <form action="" method="post">
+                <div>
+                  <h2 style="font-weight: bold;">Get Started Now</h2>
+                  <p style="font-weight: bold;">The smartest way to invest and save online</p>
+                </div>
+                <div class="firstName">
+                  <div><label for="first-name">First Name<span class="asteriks">*</span></label></div>
+                  <div><input style="font-size: large;" type="text" name="first-name" id="first-name" placeholder="Enter first name" required></div>
+                </div>
+                <div class="lastName">
+                  <div><label for="last-name">Last Name<span class="asteriks">*</span></label></div>
+                  <div><input style="font-size: large;" type="text" name="last-name" id="last-name" placeholder="Enter last name" required></div>
+                </div>
+                <div class="username">
+                  <div><label for="username">Username<span class="asteriks">*</span></label></div>
+                  <div><input style="font-size: large;" type="text" name="username" id="username" placeholder="Enter username" required></div>
+                </div>
+
+                <div class="btn"><button class="continue-button">Sign up</button></div>
+
+                <div style="text-align: center;">Already have an account? <span class="asteriks">Sign in</span> </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+<style>
+
+
+.slide-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+.slide-container.active {
+  display: block;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Set form container to fill the viewport height */
+  max-height: 100%; /* Ensure the form does not exceed viewport height */
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+.form input {
+  border-radius: 15px;
+  border: 1px solid #929292;
+  width: 100%;
+  max-width: 400px;
+  padding: 15px 20px;
+  font-size: large;
+}
+
+/* Center the inputs horizontally and vertically */
+.pin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.pin-input {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.btn button {
+  width: 100%;
+  padding: 16px 0px 17px 0px;
+  background: #FC4E04;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .form input {
+    max-width: 300px;
+  }
+
+  .pin-container {
+    width: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .form input {
+    max-width: 250px;
+  }
+
+  .pin-container {
+    width: 100px;
+  }
+}
+
+
+
+    </style>
+      <!-- Fifth Slide -->
+      <div class="slide-container" id="slide5" style="background-color: white;">
+        <div class="main" style="width: 100%;">
+          <div class="SignUp">
+            <div class="header">
+              <div class="logo"><img src="orange_logo__havvest.png" alt="logo"></div>
+            </div>
+            <div class="form">
+              <form action="" method="post">
+                <div>
+                  <h2 style="font-weight: bolder; font-size: xx-large;">Create a 4-digit transaction pin</h2>
+                  <p style="font-weight: bold;">The Pin will be used to authorize transactions</p>
+                </div> <br>
+                <div class="pin-container">
+                  <input type="text" maxlength="1" id="input1" class="pin-input" />
+                  <input type="text" maxlength="1" id="input2" class="pin-input" />
+                  <input type="text" maxlength="1" id="input3" class="pin-input" />
+                  <input type="text" maxlength="1" id="input4" class="pin-input" />
+                </div>
+                <div style="margin-top: 3rem;" class="btn"><button class="continue-button">Sign up</button></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+        
+      </style>
+      <!-- Sixth Slide -->
+
+
+      <div class="slide-container" id="slide6">
+       
+        <div class="main" style="width: 100%;">
+            <div class="SignUp">
+              <div class="header">
+                <div class="logo"><img src="orange_logo__havvest.png" alt="logo"></div>
+              </div>
+              <div class="form">
+                <form action="" method="post">
+                  <div>
+                    <h2 style="font-weight: bold;">Get Started Now</h2>
+                    <p style="font-weight: bold;">The smartest way to invest and save online</p>
+                  </div>
+                  <div class="firstName">
+                    <div><label for="first-name">Email Address<span class="asteriks">*</span></label></div>
+                    <div><input style="font-size: large;" type="text" name="first-name" id="first-name" placeholder="Enter first name" required></div>
+                  </div>
+                  <div class="lastName">
+                    <div><label for="last-name">Password<span class="asteriks">*</span></label></div>
+                    <div><input style="font-size: large;" type="password" name="last-name" id="last-name" placeholder="Enter last name" required></div>
+                  </div>
+                 
+                  <div class="agree">
+                    <input class="wider-checkbox" style="font-size: large;font-weight: bolder;color: rgba(0, 0, 0, 0.885);padding: 10px;" type="checkbox">
+                    <label for="agreement">I agree to the <span class="asteriks">terms & condition privacy policy</span> </label>
+                  </div>
+                  <div class="btn"><button class="continue-button">Sign up</button></div>
+  
+            
+                </form>
+              </div>
+            </div>
+          </div>
+
+      </div>
+     
+
+    </div>
+    
+  </div>
+
+  <script>
+    // Your script for slide switching with different variable names
+    let currentSlideNumber = 1;
+    const totalSlidesCount = 6;
+
+    document.addEventListener("click", function () {
+      currentSlideNumber = (currentSlideNumber % totalSlidesCount) + 1;
+      showSlide(currentSlideNumber);
+    });
+
+    function showSlide(slideNumber) {
+      const slideContainers = document.querySelectorAll(".slide-container");
+      slideContainers.forEach((slideContainer) => {
+        slideContainer.classList.remove("active");
+      });
+      document.getElementById("slide" + slideNumber).classList.add("active");
+    }
+
+    // Show the first slide initially
+    showSlide(currentSlideNumber);
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  
+</body>
+</html>

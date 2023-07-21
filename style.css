@@ -178,6 +178,8 @@ span{
     background-color: #555;
   }
 
+  
+
   /* Your existing CSS styles go here */
 
 /* Add CSS media queries for responsiveness */
@@ -238,3 +240,11 @@ span{
     }
   }
   
+  .desktop-content {
+    display: block;
+}
+
+/* Specific styles for the mobile version */
+.mobile-content {
+    display: none;
+}
